@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enhanced Form with HTML5 Features</title>
+    <style>
+        /* Basic styling for clarity and accessibility */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, main, footer {
+            max-width: 800px;
+            margin: auto;
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            margin-bottom: 0.5em;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        figure {
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+        }
+        form {
+            background-color: #eef5f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[readonly] {
+            background-color: #ddd;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced HTML5 Content & Form</h1>
+    <p>Showcasing lists, tables, media, and a fully featured form</p>
+</header>
+
+<main>
+
+    <!-- Section: Lists -->
+    <section>
+        <h2>Favorite Fruits and Vegetables</h2>
+        <p>Here is an ordered list of fruits I like, followed by an unordered list of vegetables:</p>
+        <ol>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Orange</li>
+            <li>Mango</li>
+        </ol>
+        <ul>
+            <li>Carrot</li>
+            <li>Spinach</li>
+            <li>Broccoli</li>
+            <li>Peas</li>
+        </ul>
+    </section>
+
+    <!-- Section: Table -->
+    <section>
+        <h2>Weekly Meal Plan</h2>
+        <table>
+            <caption>Healthy Meal Plan for the Week</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Monday</td><td>Oatmeal & berries</td><td>Chicken salad</td><td>Grilled fish & veggies</td></tr>
+                <tr><td>Tuesday</td><td>Scrambled eggs</td><td>Veggie wrap</td><td>Beef stir-fry</td></tr>
+                <tr><td>Wednesday</td><td>Yogurt & granola</td><td>Quinoa salad</td><td>Spaghetti with marinara</td></tr>
+                <tr><td>Thursday</td><td>Smoothie bowl</td><td>Chicken sandwich</td><td>Vegetable curry</td></tr>
+                <tr><td>Friday</td><td>Pancakes</td><td>Caesar salad</td><td>Pizza with veggies</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section: Media -->
+    <section>
+        <h2>Nature Photo & Audio</h2>
+        <figure>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+                 alt="Beautiful mountain landscape" width="100%" />
+            <figcaption>Mountain landscape during sunset.</figcaption>
+        </figure>
+
+        <figure>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+            <figcaption>Sample audio track.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Section: HTML5 Form -->
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="POST" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3" autocomplete="name" />
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1-555-123-4567" pattern="^\+?[0-9\s\-]{7,15}$" autocomplete="tel" />
+
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required max="2005-12-31" />
+
+                <label for="website">Website URL</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com" autocomplete="url" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="5" autocomplete="username" />
+
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8" autocomplete="new-password" />
+
+                <label for="confirm-password">Confirm Password *</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required minlength="8" autocomplete="new-password" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked />
+                    Subscribe to newsletter
+                </label>
+
+                <label for="country">Country *</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Comments</legend>
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" placeholder="Write anything here..." rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    I agree to the <a href="https://www.example.com/terms" target="_blank" rel="noopener noreferrer">terms and conditions</a>.
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Enhanced Form Assignment</p>
+</footer>
+
+</body>
+</html>
